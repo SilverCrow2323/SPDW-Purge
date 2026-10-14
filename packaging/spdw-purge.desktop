@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=SPDW Purge
+GenericName=Disk Analyzer & Cleaner
+Comment=Find what eats your disk and wipe it: junk, apps, duplicates
+Exec=spdw-purge
+Icon=spdw-purge
+Terminal=false
+Categories=System;Utility;
+Keywords=cleaner;disk;space;purge;bleach;junk;duplicates;treemap;

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="SPDW Purge - disk analyzer and cleaner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d0d1a"/><stop offset="1" stop-color="#1a1033"/></linearGradient>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" y="3" fill="#000" opacity="0.38"/></pattern>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e3a5f" stroke-width="0.7" opacity="0.55"/></pattern>
+    <filter id="glow" x="-20%" y="-30%" width="140%" height="160%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1280" height="320" fill="url(#bg)"/>
+  <rect width="1280" height="320" fill="url(#grid)"/>
+
+  <!-- treemap motif -->
+  <g transform="translate(868,0) scale(0.885,1) translate(-820,0)" font-family="'JetBrains Mono','DejaVu Sans Mono','Courier New',monospace" font-size="13" stroke-width="1.5">
+    <rect x="820" y="36"  width="230" height="150" fill="#00ffcc" fill-opacity=".10" stroke="#00ffcc"/>
+    <rect x="1054" y="36" width="186" height="96"  fill="#ff00ff" fill-opacity=".10" stroke="#ff00ff"/>
+    <rect x="1054" y="136" width="186" height="50" fill="#f0e130" fill-opacity=".10" stroke="#f0e130"/>
+    <rect x="820" y="190" width="120" height="94"  fill="#3a86ff" fill-opacity=".10" stroke="#3a86ff"/>
+    <rect x="944" y="190" width="150" height="94"  fill="#ff6600" fill-opacity=".10" stroke="#ff6600"/>
+    <rect x="1098" y="190" width="142" height="46" fill="#8338ec" fill-opacity=".12" stroke="#8338ec"/>
+    <rect x="1098" y="240" width="70" height="44"  fill="#06d6a0" fill-opacity=".10" stroke="#06d6a0"/>
+    <rect x="1172" y="240" width="68" height="44"  fill="#ff2244" fill-opacity=".12" stroke="#ff2244"/>
+    <text x="834" y="60" fill="#00ffcc" stroke="none">▸ Videos</text><text x="834" y="78" fill="#6a6a8e" stroke="none">38%</text>
+    <text x="1068" y="60" fill="#ff00ff" stroke="none">▸ ISOs</text><text x="1068" y="78" fill="#6a6a8e" stroke="none">21%</text>
+    <text x="1068" y="158" fill="#f0e130" stroke="none">.cache</text>
+    <text x="834" y="214" fill="#3a86ff" stroke="none">ROMs</text>
+    <text x="958" y="214" fill="#ff6600" stroke="none">Downloads</text>
+  </g>
+
+  <!-- logo -->
+  <g filter="url(#glow)">
+    <polygon points="140,64 214,106 214,190 140,232 66,190 66,106" fill="#16213e" stroke="#00ffcc" stroke-width="5" stroke-linejoin="round"/>
+    <polygon points="140,88 194,118 194,178 140,208 86,178 86,118" fill="none" stroke="#1e3a5f" stroke-width="2.5"/>
+    <line x1="70" y1="238" x2="212" y2="58" stroke="#ff00ff" stroke-width="9" stroke-linecap="square"/>
+    <text x="140" y="172" text-anchor="middle" font-family="'JetBrains Mono','DejaVu Sans Mono','Courier New',monospace" font-weight="bold" font-size="84" fill="#00ffcc" stroke="#0d0d1a" stroke-width="3" paint-order="stroke">P</text>
+  </g>
+  <line x1="82" y1="238" x2="224" y2="58" stroke="#ff2244" stroke-width="3" opacity=".85"/>
+
+  <!-- wordmark -->
+  <g font-family="'JetBrains Mono','DejaVu Sans Mono','Courier New',monospace" font-weight="bold">
+    <text x="258" y="152" font-size="72" fill="#ff00ff" opacity=".85" transform="translate(5,0)">SPDW PURGE</text>
+    <text x="258" y="152" font-size="72" fill="#ff2244" opacity=".6" transform="translate(-4,2)">SPDW PURGE</text>
+    <text x="258" y="152" font-size="72" fill="#00ffcc" filter="url(#glow)">SPDW PURGE</text>
+    <text x="262" y="198" font-size="18" textLength="548" lengthAdjust="spacing" fill="#8a8aae" font-weight="normal">DISK ANALYZER &amp; CLEANER FOR DEBIAN / MX LINUX</text>
+    <g font-size="14" font-weight="bold" letter-spacing="1">
+      <rect x="262" y="222" width="76" height="28" rx="3" fill="none" stroke="#00ffcc"/><text x="300" y="241" text-anchor="middle" fill="#00ffcc">SCAN</text>
+      <rect x="346" y="222" width="64" height="28" rx="3" fill="none" stroke="#ff00ff"/><text x="378" y="241" text-anchor="middle" fill="#ff00ff">MAP</text>
+      <rect x="418" y="222" width="72" height="28" rx="3" fill="none" stroke="#f0e130"/><text x="454" y="241" text-anchor="middle" fill="#f0e130">JUNK</text>
+      <rect x="498" y="222" width="72" height="28" rx="3" fill="none" stroke="#3a86ff"/><text x="534" y="241" text-anchor="middle" fill="#3a86ff">APPS</text>
+      <rect x="578" y="222" width="96" height="28" rx="3" fill="none" stroke="#ff6600"/><text x="626" y="241" text-anchor="middle" fill="#ff6600">FINDER</text>
+      <rect x="682" y="222" width="56" height="28" rx="3" fill="none" stroke="#06d6a0"/><text x="710" y="241" text-anchor="middle" fill="#06d6a0">CLI</text>
+    </g>
+    <text x="262" y="288" font-size="14" fill="#6a6a8e" font-weight="normal">by sirpips · SPDW Factory Lab</text>
+  </g>
+
+  <rect width="1280" height="320" fill="url(#scan)"/>
+  <rect width="1280" height="3" fill="#00ffcc"/>
+  <rect y="317" width="1280" height="3" fill="#ff00ff"/>
+</svg>

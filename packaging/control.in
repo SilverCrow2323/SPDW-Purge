@@ -1,0 +1,18 @@
+Package: spdw-purge
+Version: @VERSION@
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3 (>= 3.8), python3-tk
+Recommends: pkexec | policykit-1, deborphan
+Suggests: flatpak
+Homepage: https://github.com/sirpips/spdw-purge
+Maintainer: sirpips <sirpips@users.noreply.github.com>
+Description: cyberpunk disk analyzer and cleaner for Debian / MX Linux
+ SPDW Purge finds what eats your disk and removes it. It combines a
+ treemap/tree/file-type scanner, system and user junk cleaning (apt, journal,
+ old kernels, logs, snapshots, caches), complete package removal with leftover
+ hunting, and a finder for duplicates, empty files, broken links and big old
+ files. Every action is confirmed, logged and can be rehearsed with DRY-RUN.
+ .
+ Made by sirpips - SPDW Factory Lab.

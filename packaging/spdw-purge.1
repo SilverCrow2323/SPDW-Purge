@@ -1,0 +1,40 @@
+.TH SPDW-PURGE 1 "2026" "SPDW Purge" "User Commands"
+.SH NAME
+spdw-purge \- cyberpunk disk analyzer and cleaner
+.SH SYNOPSIS
+.B spdw-purge
+[\fB\-\-dry\-run\fR]
+.br
+.B spdw-purge \-\-list
+.br
+.B spdw-purge \-\-clean
+\fIsafe\fR|\fIall\fR|\fIkey,key,...\fR [\fB\-\-yes\fR] [\fB\-\-dry\-run\fR]
+.br
+.B spdw-purge \-\-top
+\fIPATH\fR
+.SH DESCRIPTION
+With no arguments the GUI starts (elevated with pkexec). The GUI has four tabs:
+SCAN (tree, top files, treemap, file types), JUNK, APPS and FINDER.
+.SH OPTIONS
+.TP
+.B \-\-list
+Measure and list every junk category.
+.TP
+.B \-\-clean WHAT
+Clean \fIsafe\fR categories, \fIall\fR non-destructive ones, or a comma-separated list of keys.
+Destructive categories (old kernels, MX snapshots, whole ~/.cache, privacy traces) must be named explicitly.
+.TP
+.B \-\-top PATH
+Print the biggest folders, file types and files under PATH.
+.TP
+.B \-\-dry\-run
+Never modify anything; log what would happen.
+.TP
+.B \-y, \-\-yes
+Do not ask for confirmation.
+.SH FILES
+.TP
+.I ~/.local/state/spdw-purge/actions.log
+Audit log of every delete / command executed (or simulated).
+.SH AUTHOR
+sirpips \(em SPDW Factory Lab

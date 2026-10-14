@@ -1,0 +1,22 @@
+#!/bin/sh
+# SPDW Purge launcher - elevates the GUI with pkexec, falls back to user mode.
+LIB=/usr/share/spdw-purge
+run() { PYTHONPATH="$LIB" exec python3 -m spdw_purge "$@"; }
+
+# CLI flags never need pkexec (use sudo yourself for --clean on system categories)
+case "$1" in
+  --list|--clean|--top|--selftest|--version|--help|-h) run "$@" ;;
+esac
+
+[ "$(id -u)" -eq 0 ] && run "$@"
+[ "$1" = "--user" ] && run "$@"
+
+if command -v pkexec >/dev/null 2>&1 && [ -n "$DISPLAY" ]; then
+  pkexec env DISPLAY="$DISPLAY" XAUTHORITY="${XAUTHORITY:-$HOME/.Xauthority}" \
+         PYTHONPATH="$LIB" python3 -m spdw_purge "$@"
+  rc=$?
+  # 126/127 = authentication dismissed or denied -> limited user mode
+  if [ "$rc" -eq 126 ] || [ "$rc" -eq 127 ]; then run --user "$@"; fi
+  exit "$rc"
+fi
+run --user "$@"
